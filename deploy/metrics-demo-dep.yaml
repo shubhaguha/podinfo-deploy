@@ -6,18 +6,14 @@ metadata:
   namespace: dev
 spec:
   replicas: 1
-  selector:
-    matchLabels:
-      app: metrics-demo
   template:
-    metadata:
-      labels:
-        app: metrics-demo
-      annotations:
-        prometheus.io/scrape: 'true'
     spec:
       containers:
       - name: metrics-pod 
         image: quay.io/brice/metrics-demo:v4-subscription-service
         ports:
         - containerPort: 3000
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "10m"
