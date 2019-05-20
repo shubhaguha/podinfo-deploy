@@ -9,7 +9,8 @@ metadata:
   namespace: dev
 spec:
   rules:
-  - http:
+  - host: training-user-14.training.weave.works
+    http:
       paths:
       - backend:
           serviceName: metrics-demo
