@@ -14,7 +14,7 @@ spec:
       paths:
       - backend:
           serviceName: metrics-demo
-          servicePort: 3000
+          servicePort: http
         path: /mighty-fine
 status:
   loadBalancer: {}
