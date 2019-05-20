@@ -15,5 +15,6 @@ spec:
           serviceName: podinfo
           servicePort: 9898
         path: /podinfo
+    host: *
 status:
   loadBalancer: {}
