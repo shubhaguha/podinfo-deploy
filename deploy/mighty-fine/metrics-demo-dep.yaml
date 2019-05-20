@@ -6,7 +6,15 @@ metadata:
   namespace: dev
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: metrics-demo
   template:
+    metadata:
+      labels:
+        app: metrics-demo
+      annotations:
+        prometheus.io/scrape: 'true'
     spec:
       containers:
       - name: metrics-pod 
